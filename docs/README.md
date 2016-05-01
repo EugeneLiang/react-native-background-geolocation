@@ -74,6 +74,13 @@ bgGeo.setConfig({
 
 The following events can all be listened-to via the method `#on(eventName, callback)`, supplying `location`, `motionchange`, `geofence` `error', or `http` for `eventName`.
 
+eg:
+```Javascript
+bgGeo.on('location', function(location) {
+    console.log('- Location changed: ', location);
+});
+```
+
 | Event Name | Notes
 |---|---|
 | [`location`](#location) | Fired whenever a new location is recorded. |
@@ -451,7 +458,7 @@ The `callbackFn` will be executed for each time a `schedule` event occurs.  Your
 
 Example:
 ```Javascript
-bgGeo.onSchedule(function(state) {
+bgGeo.on('schedule', function(state) {
     console.log('- A schedule event fired: ', state.enabled);
     console.log('- Current state: ', state);
 })
