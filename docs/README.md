@@ -6,18 +6,18 @@ The following **Options** can all be provided to the plugin's `#configure` metho
 
 ```Javascript
 bgGeo.configure({
-	desiredAccuracy: 0,
-	distanceFilter: 50,
-	.
-	.
-	.
+    desiredAccuracy: 0,
+    distanceFilter: 50,
+    .
+    .
+    .
 });
 
 // Use #setConfig if you need to change options after you've executed #configure
 
 bgGeo.setConfig({
-	desiredAccuracy: 10,
-	distanceFilter: 10
+    desiredAccuracy: 10,
+    distanceFilter: 10
 });
 
 ```
@@ -347,7 +347,7 @@ bgGeo.on('error', function(error) {
 // or using alternate syntax:
 
 bgGeo.on("error", function(error) {
-	alert(error.type + " error: " + error.code);
+    alert(error.type + " error: " + error.code);
 });
 
 ```
@@ -400,11 +400,11 @@ The `callbackFn` will be executed for each HTTP request. The `callbackFn` will b
 Example:
 ```Javascript
 bgGeo.on('http', function(response) {
-	var status = response.status;
-	var responseText = response.responseText;
-	var res = JSON.parse(responseText);  // <-- if your server returns JSON
+    var status = response.status;
+    var responseText = response.responseText;
+    var res = JSON.parse(responseText);  // <-- if your server returns JSON
 
-	console.log("- HTTP success", status, res);
+    console.log("- HTTP success", status, res);
 
 })
 ```
@@ -445,7 +445,7 @@ bgGeo.on('heartbeat', function(params) {
 
 ####`schedule`
 
-The `callbackFn` will be executed for each time a `schedule` event occurs.  Your `callbackFn` will be provided with the current `state` object (@see [#getState](#getstatecallbackfn))).  `state.enabled` will reflect the state according to your configured `schedule`.
+The `callbackFn` will be executed for each time a `schedule` event occurs.  Your `callbackFn` will be provided with the current `state` object (@see [#getState](#getstatecallbackfn)).  `state.enabled` will reflect the state according to your configured `schedule`.
 
 ######@param {Object} State
 
@@ -576,8 +576,8 @@ Set `false` to disable persisting the retrieve location (default is `true`);
 bgGeo.getCurrentPosition({
   persist: true,
   timeout: 30, // 30 second timeout to fetch location
-  maximumAge: 5000,	// Accept the last-known-location if not older than 5000 ms.
-  minimumAccuracy: 10,	// Fetch a location with a minimum accuracy of `10` meters.
+  maximumAge: 5000, // Accept the last-known-location if not older than 5000 ms.
+  minimumAccuracy: 10,  // Fetch a location with a minimum accuracy of `10` meters.
   extras: {       // [Optional] Attach your own custom `metaData` to this location. This metaData will be persisted to SQLite and POSTed to your server
     foo: "bar"
   }
@@ -790,8 +790,8 @@ Your callback will be provided with the following params
 ```Javascript
     bgGeo.sync(function(locations) {
         try {
-        	// Here are all the locations from the database. The database is now EMPTY.
-        	console.log('synced locations: ', locations);
+            // Here are all the locations from the database. The database is now EMPTY.
+            console.log('synced locations: ', locations);
         } catch(e) {
             console.error('An error occurred in my application code', e);
         }
