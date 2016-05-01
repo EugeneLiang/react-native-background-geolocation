@@ -72,7 +72,7 @@ bgGeo.setConfig({
 
 ## Events
 
-The following events can all be listened-to via the method `#on(eventName, callback)`, supplying `location`, `motionchange`, `geofence` `error', or `http` for `eventName`.
+The following events can all be listened-to via the method `#on(eventName, callback)`,
 
 eg:
 ```Javascript
