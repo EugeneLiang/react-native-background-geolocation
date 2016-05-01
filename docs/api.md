@@ -445,7 +445,7 @@ bgGeo.on('heartbeat', function(params) {
 
 ####`schedule`
 
-The `callbackFn` will be executed for each time a `schedule` event occurs.  Your `callbackFn` will be provided with the current `state` object (@see `#getState`).  `state.enabled` will reflect the state according to your configured `schedule`.
+The `callbackFn` will be executed for each time a `schedule` event occurs.  Your `callbackFn` will be provided with the current `state` object (@see [#getState](#getstatecallbackfn))).  `state.enabled` will reflect the state according to your configured `schedule`.
 
 ######@param {Object} State
 
